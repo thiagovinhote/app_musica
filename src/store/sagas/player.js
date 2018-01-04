@@ -12,14 +12,23 @@ export function* setSong(action) {
     yield put(ActionsCreators.playerSetSongSuccess(action.song, action.list));
     yield put(ActionsCreators.playerPlay());
   } catch (e) {
+    console.tron.log(e);
     yield put(ActionsCreators.playerSetSongFailure());
   }
 }
 
 export function* play() {
-  yield cps(RNSound.play, 0);
+  try {
+    yield cps(RNSound.play, 0);
+  } catch (e) {
+    console.tron.log(e);
+  }
 }
 
 export function* pause() {
-  yield cps(RNSound.pause, 0);
+  try {
+    yield cps(RNSound.pause, 0);
+  } catch (e) {
+    console.tron.log(e);
+  }
 }
