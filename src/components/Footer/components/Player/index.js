@@ -62,7 +62,7 @@ export class Player extends Component {
           </View>
 
           { this.props.player.loading
-            ? <ActivityIndicator size="small" color="#FFF" />
+            ? <ActivityIndicator size="small" color="#FA6733" />
             : this.renderButton() }
 
         </View>

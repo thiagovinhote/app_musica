@@ -52,7 +52,7 @@ class AlbumList extends Component {
           </Text>
 
           { this.props.loading
-            ? <ActivityIndicator size="small" color="#FFF" />
+            ? <ActivityIndicator size="small" color="#FA6733" />
             : this.renderContent() }
         </View>
       );
