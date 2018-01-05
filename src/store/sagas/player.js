@@ -7,10 +7,10 @@ const { RNSound } = NativeModules;
 
 export function* setSong(action) {
   try {
-    yield cps(RNSound.prepare, action.song.url, 0, {});
+    // yield cps(RNSound.prepare, action.song.url, 0, {});
 
     yield put(ActionsCreators.playerSetSongSuccess(action.song, action.list));
-    yield put(ActionsCreators.playerPlay());
+    // yield put(ActionsCreators.playerPlay());
   } catch (e) {
     console.tron.log(e);
     yield put(ActionsCreators.playerSetSongFailure());

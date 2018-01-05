@@ -12,19 +12,19 @@ const styles = StyleSheet.create({
   },
 
   activeTitle: {
-    color: colors.white,
+    color: colors.burningOrange,
   },
 
   inactiveTitle: {
-    color: colors.regular,
+    color: colors.capeCod,
   },
 
   activeIcon: {
-    color: colors.white,
+    color: colors.burningOrange,
   },
 
   inactiveIcon: {
-    color: colors.regular,
+    color: colors.capeCod,
   },
 });
 

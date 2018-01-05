@@ -26,13 +26,13 @@ export class Player extends Component {
   }
 
   renderPlay = () => (
-    <TouchableOpacity onPress={this.props.playerPlay}>
-      <Icon name="controller-play" size={20} color="#FFF" />
+    <TouchableOpacity style={styles.button} onPress={this.props.playerPlay}>
+      <Icon style={styles.alignCenterPlay} name="controller-play" size={20} color="#FFF" />
     </TouchableOpacity>
   );
 
   renderPause = () => (
-    <TouchableOpacity onPress={this.props.playerPause}>
+    <TouchableOpacity style={styles.button} onPress={this.props.playerPause}>
       <Icon name="controller-paus" size={20} color="#FFF" />
     </TouchableOpacity>
   );

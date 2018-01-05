@@ -4,18 +4,18 @@ import { metrics, colors, fonts } from 'styles';
 const styles = StyleSheet.create({
   player: {
     alignSelf: 'stretch',
-    borderTopWidth: 2,
-    borderColor: colors.dark,
+    // borderTopWidth: 2,
+    // borderColor: colors.dark,
   },
 
   content: {
-    height: 42,
-    backgroundColor: colors.darker,
-    borderBottomWidth: 1,
-    borderColor: colors.background,
+    height: 96,
+    backgroundColor: colors.gray,
+    // borderBottomWidth: 1,
+    // borderColor: colors.background,
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: metrics.baseMargin,
+    paddingHorizontal: metrics.mediumMargin,
     justifyContent: 'space-between',
   },
 
@@ -25,24 +25,40 @@ const styles = StyleSheet.create({
   },
 
   thumbnail: {
-    height: 26,
-    width: 26,
-    resizeMode: 'contain',
+    height: 64,
+    width: 64,
+    resizeMode: 'cover',
+    borderRadius: metrics.tinyRadius,
   },
 
   current: {
     flexDirection: 'column',
-    marginHorizontal: metrics.baseMargin,
+    marginHorizontal: metrics.mediumMargin,
   },
 
   title: {
-    color: colors.white,
-    fontSize: fonts.small,
+    color: colors.capeCod,
+    fontSize: fonts.semiBig,
+    fontWeight: '600',
   },
 
   description: {
-    color: colors.regular,
-    fontSize: fonts.tiny,
+    color: colors.grayChateau,
+    fontSize: fonts.regular,
+  },
+
+  button: {
+    width: 32,
+    height: 32,
+    backgroundColor: colors.burningOrange,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
+    borderRadius: 16,
+  },
+
+  alignCenterPlay: {
+    left: 1,
   },
 });
 

@@ -13,4 +13,9 @@ export default {
 
   darkTransparent: 'rgba(0, 0, 0, 0.5)',
   transparent: 'rgba(0, 0, 0, 0.0)',
+
+  gray: '#F5F5F6',
+  capeCod: '#414344',
+  grayChateau: '#AAAFB3',
+  burningOrange: '#FA6733',
 };

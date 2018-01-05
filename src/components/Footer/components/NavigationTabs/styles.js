@@ -4,7 +4,7 @@ import { metrics, colors } from 'styles';
 const styles = StyleSheet.create({
   tabBar: {
     height: metrics.tabBarHeight,
-    backgroundColor: colors.darker,
+    backgroundColor: colors.gray,
     flexDirection: 'row',
     alignSelf: 'stretch',
     alignItems: 'center',
