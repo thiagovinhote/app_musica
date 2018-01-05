@@ -4,8 +4,8 @@ import { metrics, colors, fonts } from 'styles';
 const styles = StyleSheet.create({
   player: {
     alignSelf: 'stretch',
-    // borderTopWidth: 2,
-    // borderColor: colors.dark,
+    borderTopWidth: 2,
+    borderColor: colors.burningOrange,
   },
 
   content: {

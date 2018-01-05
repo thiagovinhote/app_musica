@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
 
   title: {
     color: colors.capeCod,
-    fontWeight: '600',
+    fontWeight: 'bold',
     fontSize: fonts.regular,
     paddingVertical: metrics.tinyMargin,
   },

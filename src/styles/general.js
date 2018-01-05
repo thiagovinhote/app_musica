@@ -9,7 +9,7 @@ const general = {
   },
 
   section: {
-    margin: metrics.baseMargin,
+    margin: metrics.mediumMargin,
   },
 
   sectionTitle: {
@@ -17,7 +17,7 @@ const general = {
     fontWeight: 'bold',
     fontSize: fonts.bigger,
     alignSelf: 'flex-start',
-    marginBottom: metrics.baseMargin,
+    marginBottom: metrics.bigMargin,
   },
 };
 

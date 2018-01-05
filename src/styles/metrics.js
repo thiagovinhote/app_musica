@@ -5,8 +5,9 @@ const { width, height } = Dimensions.get('window');
 export default {
   tinyMargin: 5,
   smallMargin: 10,
-  baseMargin: 20,
   mediumMargin: 16,
+  baseMargin: 20,
+  bigMargin: 30,
   screenWidth: width < height ? width : height,
   screenHeight: width < height ? height : width,
   tabBarHeight: 54,

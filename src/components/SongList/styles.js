@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   ...general,
 
   listItem: {
-    marginTop: metrics.baseMargin,
+    marginTop: metrics.mediumMargin,
   },
 
   'listItem-first': {

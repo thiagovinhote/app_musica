@@ -8,16 +8,20 @@ const styles = StyleSheet.create({
     marginHorizontal: 0,
   },
 
+  listSectionTitle: {
+    marginLeft: metrics.mediumMargin,
+  },
+
   listItem: {
     marginHorizontal: metrics.smallMargin,
   },
 
   'listItem-first': {
-    marginLeft: metrics.baseMargin,
+    marginLeft: metrics.mediumMargin,
   },
 
   'listItem-last': {
-    marginRight: metrics.baseMargin,
+    marginRight: metrics.mediumMargin,
   },
 
 });

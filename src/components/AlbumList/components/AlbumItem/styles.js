@@ -11,19 +11,20 @@ const styles = StyleSheet.create({
   image: {
     height: 150,
     resizeMode: 'contain',
-    borderRadius: metrics.baseRadius,
+    borderRadius: metrics.tinyRadius,
   },
 
   title: {
-    color: colors.white,
+    color: colors.capeCod,
     fontWeight: 'bold',
     marginTop: metrics.smallMargin,
     alignSelf: 'center',
   },
 
   description: {
-    color: colors.regular,
+    color: colors.grayChateau,
     fontSize: fonts.small,
+    fontWeight: '600',
     alignSelf: 'center',
   },
 });

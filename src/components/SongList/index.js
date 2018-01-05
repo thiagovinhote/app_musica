@@ -62,7 +62,6 @@ export class SongList extends Component {
           { this.props.showTitle &&
             <Text style={[
               styles.sectionTitle,
-              styles.listSectionTitle,
             ]}
             >
               { this.props.title }

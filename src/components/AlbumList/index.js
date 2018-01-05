@@ -42,7 +42,14 @@ class AlbumList extends Component {
     render() {
       return (
         <View style={[styles.section, styles.listSection]}>
-          <Text style={styles.sectionTitle}>{this.props.title}</Text>
+          <Text
+            style={[
+              styles.sectionTitle,
+              styles.listSectionTitle,
+            ]}
+          >
+            {this.props.title}
+          </Text>
 
           { this.props.loading
             ? <ActivityIndicator size="small" color="#FFF" />
