@@ -3,25 +3,45 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /* Presentational */
-import { View, Image } from 'react-native';
-import Controller from 'components/Controller';
+import { View, Image, Text } from 'react-native';
+import ControllerComponent from 'components/Controller';
 import Header from 'components/Header';
+import { Player } from 'components/Footer/components/Player';
+
+/* Redux */
+import { connect } from 'react-redux';
 
 import styles from './styles';
 
-const Song = () => (
+const Song = props => (
   <View style={styles.container}>
-    <Header title="Now Playing" closeEnabled />
+    <Header title="Tocando agora" closeEnabled />
     <View style={styles.imageContainer}>
       <View style={styles.imageBox}>
         <Image
           style={styles.image}
-          source={{ uri: 'https://i.ytimg.com/vi/8VDjPYcL-oU/maxresdefault.jpg' }}
+          source={{ uri: props.player.song.thumbnail }}
         />
       </View>
     </View>
-    <Controller />
+
+    <View style={styles.infoSong}>
+      <Text style={styles.title}>{ props.player.song.title }</Text>
+      <Text style={styles.description}>{ props.player.song.author }</Text>
+    </View>
+
+    <ControllerComponent />
   </View>
 );
 
-export default Song;
+Song.propTypes = {
+  player: PropTypes.shape({
+    song: Player.propTypes.player.song,
+  }).isRequired,
+};
+
+const mapStateToProps = state => ({
+  player: state.player,
+});
+
+export default connect(mapStateToProps)(Song);

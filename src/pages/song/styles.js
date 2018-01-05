@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { general, colors, metrics } from 'styles';
+import { general, metrics, colors, fonts } from 'styles';
 
 const styles = StyleSheet.create({
   ...general,
@@ -28,6 +28,26 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
     borderRadius: metrics.baseRadius,
+  },
+
+  infoSong: {
+    padding: metrics.tinyMargin,
+    marginTop: metrics.smallMargin,
+  },
+
+  title: {
+    color: colors.capeCod,
+    fontSize: fonts.bigger,
+    fontWeight: '600',
+    alignSelf: 'center',
+  },
+
+  description: {
+    color: colors.grayChateau,
+    fontSize: fonts.big,
+    fontWeight: '600',
+    alignSelf: 'center',
+    marginTop: metrics.tinyMargin,
   },
 });
 

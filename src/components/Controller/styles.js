@@ -1,14 +1,13 @@
 import { StyleSheet } from 'react-native';
-import { general, metrics, colors } from 'styles';
+import { metrics, colors } from 'styles';
 
 const styles = StyleSheet.create({
-  ...general,
 
   contentController: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: metrics.baseMargin,
+    margin: metrics.baseMargin,
   },
 
   medium: {

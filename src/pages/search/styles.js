@@ -10,6 +10,8 @@ const styles = StyleSheet.create({
     fontSize: fonts.smaller,
     backgroundColor: colors.white,
     paddingHorizontal: metrics.smallMargin,
+    borderColor: colors.dark,
+    borderWidth: StyleSheet.hairlineWidth,
     borderRadius: 3,
     paddingVertical: 0,
   },
