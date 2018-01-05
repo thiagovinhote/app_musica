@@ -8,13 +8,13 @@ const styles = StyleSheet.create({
     height: metrics.navBarHeight + metrics.statusBarHeight,
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: colors.darker,
+    backgroundColor: colors.white,
     flexDirection: 'row',
   },
 
   title: {
-    color: colors.white,
-    fontSize: fonts.regular,
+    color: colors.capeCod,
+    fontSize: fonts.big,
     fontWeight: 'bold',
     alignSelf: 'center',
   },
@@ -23,9 +23,13 @@ const styles = StyleSheet.create({
     width: 20,
   },
 
+  leftIcon: {
+    color: colors.capeCod,
+  },
+
   rightHidden: {
-    
-  }
+    width: 20,
+  },
 });
 
 export default styles;

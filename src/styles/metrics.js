@@ -11,7 +11,7 @@ export default {
   screenWidth: width < height ? width : height,
   screenHeight: width < height ? height : width,
   tabBarHeight: 54,
-  navBarHeight: 54,
+  navBarHeight: 44,
   statusBarHeight: (Platform.OS === 'ios') ? 20 : 0,
   baseRadius: 10,
   tinyRadius: 4,

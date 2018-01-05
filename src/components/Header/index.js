@@ -36,7 +36,7 @@ class Header extends Component {
       <View style={styles.leftButton}>
         { this.props.backEnabled &&
           <TouchableOpacity onPress={this.navigateBack}>
-            <Icon name="angle-left" size={20} color="#FFF" />
+            <Icon style={styles.leftIcon} name="angle-left" size={24} />
           </TouchableOpacity>}
       </View>
       <Text style={styles.title}>{this.props.title}</Text>

@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
   current: {
     flexDirection: 'column',
     marginHorizontal: metrics.mediumMargin,
+    maxWidth: 250,
   },
 
   title: {
