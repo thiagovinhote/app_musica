@@ -5,6 +5,7 @@ import Footer from 'components/Footer';
 import Treding from 'pages/treding';
 import Search from 'pages/search';
 import Album from 'pages/album';
+import Song from 'pages/song';
 
 const TredingRoutes = StackNavigator({
   Treding: { screen: Treding },
@@ -13,7 +14,7 @@ const TredingRoutes = StackNavigator({
   headerMode: 'none',
 });
 
-const Routes = TabNavigator({
+const MainRoutes = TabNavigator({
   Treding: { screen: TredingRoutes },
   Search: { screen: Search },
 }, {
@@ -22,6 +23,14 @@ const Routes = TabNavigator({
   lazy: true,
   tabBarPosition: 'bottom',
   tabBarComponent: Footer,
+});
+
+const Routes = StackNavigator({
+  Main: { screen: MainRoutes },
+  Song: { screen: Song },
+}, {
+  mode: 'modal',
+  headerMode: 'none',
 });
 
 export default Routes;

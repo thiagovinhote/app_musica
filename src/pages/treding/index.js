@@ -39,7 +39,7 @@ class Treding extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header title="Em alta" />
+        <Header title="Em alta" songEnabled />
         <ScrollView
           style={styles.container}
           showsVerticalScrollIndicator={false}

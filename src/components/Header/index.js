@@ -17,7 +17,7 @@ class Header extends Component {
     title: PropTypes.string,
     children: PropTypes.element,
     backEnabled: PropTypes.bool,
-    playerEnabled: PropTypes.bool,
+    songEnabled: PropTypes.bool,
     dispatch: PropTypes.func.isRequired,
   };
 
@@ -25,7 +25,7 @@ class Header extends Component {
     title: null,
     children: null,
     backEnabled: false,
-    playerEnabled: false,
+    songEnabled: false,
   };
 
   navigateBack = () => {
@@ -33,20 +33,25 @@ class Header extends Component {
     return dispatch(NavigationActions.back());
   };
 
+  navigateSong = () => {
+    const { dispatch } = this.props;
+    return dispatch(NavigationActions.navigate({ routeName: 'Song' }));
+  };
+
   renderHeaderTitle = () => (
     <View style={styles.headerContainer}>
       <View style={styles.leftButton}>
         { this.props.backEnabled &&
           <TouchableOpacity onPress={this.navigateBack}>
-            <Icon style={styles.leftIcon} name="angle-left" size={24} />
+            <Icon style={styles.leftIcon} name="angle-left" size={20} />
           </TouchableOpacity>}
       </View>
       <Text style={styles.title}>{this.props.title}</Text>
 
       <View style={styles.rightButton}>
-        { this.props.playerEnabled &&
-          <TouchableOpacity onPress={this.showPlayer}>
-            <Icon style={styles.icon} name="angle-left" size={24} />
+        { this.props.songEnabled &&
+          <TouchableOpacity onPress={this.navigateSong}>
+            <Icon style={styles.icon} name="headphones" size={20} />
           </TouchableOpacity>}
       </View>
     </View>
