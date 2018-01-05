@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     width: 20,
   },
 
-  leftIcon: {
+  icon: {
     color: colors.capeCod,
   },
 

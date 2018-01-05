@@ -17,6 +17,7 @@ class Header extends Component {
     title: PropTypes.string,
     children: PropTypes.element,
     backEnabled: PropTypes.bool,
+    playerEnabled: PropTypes.bool,
     dispatch: PropTypes.func.isRequired,
   };
 
@@ -24,6 +25,7 @@ class Header extends Component {
     title: null,
     children: null,
     backEnabled: false,
+    playerEnabled: false,
   };
 
   navigateBack = () => {
@@ -41,7 +43,12 @@ class Header extends Component {
       </View>
       <Text style={styles.title}>{this.props.title}</Text>
 
-      <View style={styles.rightHidden} />
+      <View style={styles.rightButton}>
+        { this.props.playerEnabled &&
+          <TouchableOpacity onPress={this.showPlayer}>
+            <Icon style={styles.icon} name="angle-left" size={24} />
+          </TouchableOpacity>}
+      </View>
     </View>
   )
 
