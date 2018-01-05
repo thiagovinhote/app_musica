@@ -5,7 +5,7 @@ import fonts from './fonts';
 const general = {
   container: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: colors.white,
   },
 
   section: {
@@ -13,10 +13,10 @@ const general = {
   },
 
   sectionTitle: {
-    color: colors.white,
+    color: colors.capeCod,
     fontWeight: 'bold',
-    fontSize: fonts.regular,
-    alignSelf: 'center',
+    fontSize: fonts.bigger,
+    alignSelf: 'flex-start',
     marginBottom: metrics.baseMargin,
   },
 };

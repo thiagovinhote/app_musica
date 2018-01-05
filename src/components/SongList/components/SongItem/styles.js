@@ -10,22 +10,26 @@ const styles = StyleSheet.create({
   image: {
     width: 50,
     resizeMode: 'cover',
-    borderRadius: metrics.baseRadius,
+    borderRadius: metrics.tinyRadius,
   },
 
   songInfo: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'center',
-    marginHorizontal: metrics.smallMargin,
+    justifyContent: 'flex-start',
+    marginHorizontal: metrics.mediumMargin,
   },
 
   title: {
-    color: colors.white,
+    color: colors.capeCod,
+    fontWeight: '600',
+    fontSize: fonts.regular,
+    paddingVertical: metrics.tinyMargin,
   },
 
   description: {
-    color: colors.regular,
+    color: colors.grayChateau,
+    fontWeight: '600',
     fontSize: fonts.small,
   },
 });
