@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     color: colors.capeCod,
   },
 
-  rightHidden: {
+  rightButton: {
     width: 20,
   },
 });

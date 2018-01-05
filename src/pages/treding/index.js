@@ -7,6 +7,7 @@ import { View, ScrollView } from 'react-native';
 import Header from 'components/Header';
 import SongListComponent, { SongList } from 'components/SongList';
 import AlbumList from 'components/AlbumList';
+import { Player } from 'components/Footer/components/Player';
 
 /* Redux */
 import { connect } from 'react-redux';
@@ -29,6 +30,9 @@ class Treding extends Component {
       loading: PropTypes.bool,
       error: PropTypes.bool,
     }).isRequired,
+    player: PropTypes.shape({
+      song: Player.propTypes.player.song,
+    }).isRequired,
   };
 
   componentDidMount() {
@@ -39,7 +43,7 @@ class Treding extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header title="Em alta" songEnabled />
+        <Header title="Em alta" songEnabled={this.props.player.song !== null} />
         <ScrollView
           style={styles.container}
           showsVerticalScrollIndicator={false}
@@ -64,6 +68,7 @@ class Treding extends Component {
 const mapStateToProps = state => ({
   trendingSongs: state.trendingSongs,
   recommendedAlbums: state.recommendedAlbums,
+  player: state.player,
 });
 
 const mapDispatchToProps = dispatch => ({

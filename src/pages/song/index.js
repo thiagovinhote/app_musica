@@ -1,24 +1,27 @@
 /* Core */
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 /* Presentational */
-import { View, Text } from 'react-native';
+import { View, Image } from 'react-native';
+import Controller from 'components/Controller';
+import Header from 'components/Header';
 
 import styles from './styles';
 
-class Song extends Component {
-    static propTypes = {}
-
-    static defaultProps = {};
-
-    render() {
-      return (
-        <View style={styles.container}>
-          <Text>Song</Text>
-        </View>
-      );
-    }
-}
+const Song = () => (
+  <View style={styles.container}>
+    <Header title="Now Playing" closeEnabled />
+    <View style={styles.imageContainer}>
+      <View style={styles.imageBox}>
+        <Image
+          style={styles.image}
+          source={{ uri: 'https://i.ytimg.com/vi/8VDjPYcL-oU/maxresdefault.jpg' }}
+        />
+      </View>
+    </View>
+    <Controller />
+  </View>
+);
 
 export default Song;

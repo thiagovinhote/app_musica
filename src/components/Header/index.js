@@ -18,6 +18,7 @@ class Header extends Component {
     children: PropTypes.element,
     backEnabled: PropTypes.bool,
     songEnabled: PropTypes.bool,
+    closeEnabled: PropTypes.bool,
     dispatch: PropTypes.func.isRequired,
   };
 
@@ -26,6 +27,7 @@ class Header extends Component {
     children: null,
     backEnabled: false,
     songEnabled: false,
+    closeEnabled: false,
   };
 
   navigateBack = () => {
@@ -43,9 +45,15 @@ class Header extends Component {
       <View style={styles.leftButton}>
         { this.props.backEnabled &&
           <TouchableOpacity onPress={this.navigateBack}>
-            <Icon style={styles.leftIcon} name="angle-left" size={20} />
+            <Icon style={styles.icon} name="angle-left" size={20} />
+          </TouchableOpacity>}
+
+        { this.props.closeEnabled &&
+          <TouchableOpacity onPress={this.navigateBack}>
+            <Icon style={styles.icon} name="angle-down" size={20} />
           </TouchableOpacity>}
       </View>
+
       <Text style={styles.title}>{this.props.title}</Text>
 
       <View style={styles.rightButton}>
